@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            background-color: wheat;
+        }
+        h3{
+            font-weight:30px;
+            color: red;
+        }
+        .main{
+            
+            width: 300px;
+            
+        }
+        form{
+            margin-top: 20px;
+           width: 250px;
+           height: auto;
+           background-color: blue;
+           border: 1px solid black;
+           border-radius: 5px;
+        }
+        input[type="text"]{
+                margin-top: 15px;
+                width: 220px;
+                height: 40px;
+                background-color:white;
+                font-weight: bold;
+                font-size: larger;
+                border: 1px solid black;
+        }
+         input[type="button"]{
+                width: 50px;
+                height: auto;
+                text-align: center;
+                font-weight: bolder;
+                font-size: larger;
+                padding: 10px;
+                margin: 2px;
+                background-color: aqua;
+                border: 2px solid black;
+        }
+        input[type="button"]:hover{
+            width: 50px;
+                height: auto;
+                text-align: center;
+                font-weight: bolder;
+                font-size: larger;
+                padding: 10px;
+                margin: 2px;
+                background-color: aqua;
+                border: 2.5px solid wheat;
+                border-radius: 15px;
+                transition: 0.1s;
+                cursor: pointer;
+        }
+        input[type="text"]:hover{
+            bottom: 1.5px solid black;
+
+        }
+        #del{
+            width:220px;
+            margin-bottom: 10px;
+            color:red;
+            border: 2px solid black;
+        }
+        #del:hover{
+            border: 3px solid red;
+            border-radius: 2px;
+            transition: 0.5s;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body><center>
+    <h3><B>Calculator</B></h3>
+    <div class="main" >
+        <form name="cal">
+            <input type="text" name="dis">
+            <br><br>
+            <input type="button" value="9" onclick="cal.dis.value+='9'">
+            <input type="button" value="8" onclick="cal.dis.value+='8'">
+            <input type="button" value="7" onclick="cal.dis.value+='7'">
+            <input type="button" value="+" onclick="cal.dis.value+='+'">
+            <br><br>
+            <input type="button" value="6" onclick="cal.dis.value+='6'">
+            <input type="button" value="5" onclick="cal.dis.value+='5'">
+            <input type="button" value="4" onclick="cal.dis.value+='4'">
+            <input type="button" value="-" onclick="cal.dis.value+='-'">
+            <br><br>
+            <input type="button" value="3" onclick="cal.dis.value+='3'">
+            <input type="button" value="2" onclick="cal.dis.value+='2'">
+            <input type="button" value="1" onclick="cal.dis.value+='1'">
+            <input type="button" value="*" onclick="cal.dis.value+='*'">
+            <br><br>
+            <input type="button" value="%" onclick="cal.dis.value+='%'">
+            <input type="button" value="/" onclick="cal.dis.value+='/'">
+            <input type="button" value="." onclick="cal.dis.value+='.'">
+            <input type="button" value="=" onclick="cal.dis.value=eval(cal.dis.value)">
+            <br><br>
+            <input type="button" value="DELETE" ID="del" onclick="cal.dis.value=''">
+        </form>
+    </div>
+    </center>
+</body>
+</html>
