@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <style>
+        *{
+            background-color: midnightblue;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main{
+            display: flex;
+            width:220px;
+            height: 100px;
+            background-color: rgb(14, 206, 94);
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        #text{
+            color: rgb(238, 241, 244);
+        }
+        h1{
+            color: aliceblue;
+        }
+        #cnt{
+            color: rgb(14, 206, 94);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <div class="main"  onclick="clickcnt()"><h2 id="text">&nbspClick here to update</h2></div>
+    <h1>Box clicked <span id="cnt" >0</span>&nbsp times</h1>
+    </div>
+</body>
+<script>
+                var c=0;
+        function clickcnt(){
+            c=c+1;
+            count=document.getElementById('cnt').innerHTML=c;
+        }
+</script>
+</html>
